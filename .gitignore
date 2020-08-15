@@ -1,0 +1,8 @@
+*.pyc
+*.sh
+
+__pycache__
+
+misc_ignore/
+_misc_ignore/
+migrations/
