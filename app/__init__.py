@@ -11,9 +11,9 @@ import csv
 
 
 
-def create_app(config_name=None):
+def create_app(config_name):
 
-    server = Flask(__name__)
+    app = Flask(__name__)
     #server.config.from_object(app_config[config_name])
     #app_config[config_name].init_app(server) #What is happending here again?
 
@@ -24,9 +24,9 @@ def create_app(config_name=None):
     #from models import ...
 
     # Blueprints
-    register_blueprints(server)
+    register_blueprints(app)
 
-    return server
+    return app
 
 
 def register_blueprints(server):
