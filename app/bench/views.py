@@ -38,4 +38,4 @@ def test_bs3():
 
         fieldnames = [key for key in results[0].keys()]
 
-        return render_template('home.html', results=results, fieldnames=fieldnames, len=len)
+        return render_template('home_bs3.html', results=results, fieldnames=fieldnames, len=len)
