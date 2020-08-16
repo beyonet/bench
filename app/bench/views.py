@@ -8,7 +8,7 @@ from . import bench
 @bench.route('/', methods=['GET', 'POST'])
 def root():
     if request.method == 'GET':
-        return render_template('home.html')
+        return render_template('home_bs4.html')
     elif request.method == 'POST':
         results = []
 
@@ -20,7 +20,7 @@ def root():
 
         fieldnames = [key for key in results[0].keys()]
 
-        return render_template('home.html', results=results, fieldnames=fieldnames, len=len)
+        return render_template('home_bs4.html', results=results, fieldnames=fieldnames, len=len)
 
 
 @bench.route('/bs3', methods=['GET', 'POST'])
